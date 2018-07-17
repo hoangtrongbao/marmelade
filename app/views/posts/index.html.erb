@@ -2,7 +2,7 @@
   <% @posts.each do |post| %>
     <%= image_tag @post.image_url.to_s, alt: “Image”, class: "img-responsive" %>
     <h1><%= link_to post.title, post %></h1>
-    <%= image_tag post.image_url.to_s >
+    <%= image_tag post.image_url.to_s %>
     <p><%= post.content %></p>
   <% end %>
 </article>
