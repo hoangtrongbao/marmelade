@@ -1,4 +1,7 @@
-<h1><%= @post.title %></h1>
-<p><%= @post.content %></p>
-<%= link_to "Edit", edit_post_path(@post) %>
-<%= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" } %>
+<article class="post">
+  <%= image_tag @post.image_url.to_s, alt: “Image”, class: "img-responsive" %>
+  <h1><%= @post.title %></h1>
+  <p><%= @post.content %></p>
+  <%= link_to "Edit", edit_post_path(@post) %>
+  <%= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" } %>
+</article>
